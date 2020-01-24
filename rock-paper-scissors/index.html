@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700|Roboto:400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://use.typekit.net/ore4kvi.css">
+
+	<title>Rock, paper, scissors</title>
+</head>
+<body class="grid">
+	<header class="grid__header grey-bg">
+		<div class="container flex flex__jc--responsive flex__ai--center">
+			<h1 class="grid__header--title">rock paper scissors</h1>
+			<img class="icon" src="img/hand.svg" />
+		</div>
+	</header>
+
+	<main class="grid__main">
+		<div class="container flex flex__ai--center flex__jc--center">
+			<div class="window flex flex__ai--center flex__jc--center" id="home">
+				<button class="grey-bg" id="play-btn">play</button>
+			</div>
+
+			<div class="hidden window flex-column flex__jc--space-between" id="game">
+				<ul class="moves flex flex__ai--center flex__jc--center">
+					<li class="moves__item grey-bg">rock</li>
+					<li class="moves__item grey-bg">paper</li>
+					<li class="moves__item grey-bg">scissors</li>
+				</ul>
+
+				<div class="stats flex flex__ai--center flex__jc--space-between">
+					<div class="stats__cpu flex flex__ai--center flex__jc--space-between">
+						<img class="icon" src="img/computer.svg" />
+						<span id="cpuScore">0</span>
+					</div>
+					<span><strong id="currentRound">1</strong> / 5</span>
+					<div class="stats__user flex flex__ai--center flex__jc--space-between">
+						<span id="userScore">0</span>
+						<img class="icon" src="img/user.svg" />
+					</div>
+				</div>
+			</div>
+
+			<div class="hidden window flex__ai--center flex__jc--center green-bg" id="modal">
+				<span id="modal-text"></span>
+			</div>
+		</div>
+	</main>
+
+	<footer class="grid__footer dark-bg">
+		<div class="container flex flex__jc--responsive flex__ai--center">
+			<small>This game was created by Nicholas Salvatore for <a href="https://www.theodinproject.com/">The Odin Project</a>.</small>
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
