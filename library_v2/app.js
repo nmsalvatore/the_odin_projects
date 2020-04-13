@@ -1,5 +1,10 @@
 'use strict'
 
+const title = document.getElementById('bookTitle');
+const author = document.getElementById('bookAuthor');
+const pages = document.getElementById('bookPages');
+const readStatus = document.getElementById('readStatus');
+
 class Book {
     constructor(title, author, pages, readStatus) {
         this.title = title;
@@ -28,6 +33,8 @@ const ls = {
     getStorage() {
         const library = [];
         const books = JSON.parse(localStorage.getItem('library'));
+
+        if (books === null) return;
 
         books.forEach(book => {
             library.push(new Book(
@@ -60,11 +67,6 @@ const ls = {
 
 const view = {
     addBook() {
-        const title = document.getElementById('bookTitle');
-        const author = document.getElementById('bookAuthor');
-        const pages = document.getElementById('bookPages');
-        const readStatus = document.getElementById('readStatus');
-
         const book = new Book(
             title.value, 
             author.value, 
