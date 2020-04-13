@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://use.typekit.net/htm6pzo.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>The Book Library</title>
+</head>
+<body>
+    <header class="container flex flex-justify-between flex-align-center">
+        <h1>The Book Library</h1>
+        <button id="addBookBtn" class="btn modal-trigger" data-target="modal1"><i class="material-icons left">add</i>Add New Book</button>
+    </header>
+    <main class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Pages</th>
+                    <th>Read?</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody id="bookList">
+            </tbody>
+        </table>
+    </main>
+
+    <div id="modal1" class="modal">
+        <main class="modal-content">
+            <h4 class="modal-header">Add a new book:</h4>
+
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field">
+                            <input type="text" name="Book Title" id="bookTitle" />
+                            <label for="bookTitle">Title</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field">
+                            <input type="text" name="Book Author" id="bookAuthor" />
+                            <label for="bookAuthor">Author</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field">
+                            <input type="number" name="Book Pages" id="bookPages" />
+                            <label for="bookPages">Pages</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field">
+                            <label for="readStatus">
+                                <input type="checkbox" name="Read Status" id="readStatus" />
+                                <span>Read?</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <input type="submit" class="btn right modal-close" id="submitBookBtn"></input>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

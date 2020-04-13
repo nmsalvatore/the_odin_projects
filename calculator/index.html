@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700|Roboto:300,400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+
+	<title>ns.calculator</title>
+</head>
+<body>
+	<div class="site-container">
+		<div class="site-header">
+			<h1 class="site-title">ns.calculator</h1>
+			<div class="theme">
+				<span id="theme1"></span>
+				<span id="theme2"></span>
+				<span id="theme3"></span>
+			</div>
+		</div>
+
+		<div class="site-content">
+			<div id="calculator" class="container">
+				<div id="display" class="noselect">0</div>
+				<div onclick="cancel()" id="cancel" class="noselect button">AC</div>
+				<div onclick="toggleSign()" id="plusmn" class="noselect button">&plusmn;</div>
+				<div onclick="convertToPercent()" id="percnt" class="noselect button">&percnt;</div>
+				<div id="divide" class="noselect button operator">&divide;</div>
+				<div id="times" class="noselect button operator">&times;</div>
+				<div id="minus" class="noselect button operator">&minus;</div>
+				<div id="plus" class="noselect button operator">&plus;</div>
+				<div onclick="equate()" id="equals" class="noselect button operator">&equals;</div>
+				<div id="nine" class="noselect button number">9</div>
+				<div id="eight" class="noselect button number">8</div>
+				<div id="seven" class="noselect button number">7</div>
+				<div id="six" class="noselect button number">6</div>
+				<div id="five" class="noselect button number">5</div>
+				<div id="four" class="noselect button number">4</div>
+				<div id="three" class="noselect button number">3</div>
+				<div id="two" class="noselect button number">2</div>
+				<div id="one" class="noselect button number">1</div>
+				<div id="zero" class="noselect button number">0</div>
+				<div onclick="insertRadixPoint()" id="radix" class="noselect button number">.</div>
+			</div>
+		</div>
+
+		<div class="site-footer">
+			<small>This calculator was created for <a href="http://www.theodinproject.com/">The Odin Project</a>.</small>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
