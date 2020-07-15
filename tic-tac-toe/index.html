@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Tic-Tac-Toe</title>
+</head>
+<body class="container">
+    <header id="site-header" class="wrapper">
+        <h1>tic.tac.toe.</h1>
+    </header>
+    <main id="site-content" class="wrapper">
+        <div id="gameIntro">
+            <div id="playBtn">Play</div>
+
+            <div id="playerOneName">
+                <p class="playerNamePrompt">Please enter the name of Player 1.</p>
+                <input id="playerOneNameInput" class="playerNameInput" type="text" name="player1" />
+            </div>
+
+            <div id="playerTwoName">
+                <p class="playerNamePrompt">Please enter the name of Player 2.</p>
+                <input id="playerTwoNameInput" class="playerNameInput" type="text" name="player2" />
+            </div>
+        </div>
+
+        <div id="gameContainer">
+            <div id="gameComplete">
+                <div class="restartBtn" onclick="view.startOver()">
+                    <span>Play again?</span>
+                </div>
+            </div>
+
+            <span id="gameDisplay"></span>
+
+            <div id="domBoard">
+                <div id="0" class="cell"></div>
+                <div id="1" class="cell"></div>
+                <div id="2" class="cell"></div>
+                <div id="3" class="cell"></div>
+                <div id="4" class="cell"></div>
+                <div id="5" class="cell"></div>
+                <div id="6" class="cell"></div>
+                <div id="7" class="cell"></div>
+                <div id="8" class="cell"></div>
+            </div>
+        </div>
+
+
+    </main>
+    <footer id="site-footer" class="wrapper">
+        <small>This game was created by Nicholas Salvatore for The Odin Project.</small>
+    </footer>
+
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>

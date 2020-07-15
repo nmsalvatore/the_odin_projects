@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #fefefe;
+    font-family: 'Roboto', sans-serif;
+    color: #222;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+small {
+    font-size: 1.7vh;
+}
+
+#site-header {
+    font-family: Times, serif;
+    font-size: 2.5vh;
+}
+
+#site-header,
+#site-footer {
+    padding: 2rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    width: 960px;
+}
+
+#gameContainer {
+    position: relative;
+    cursor: default;
+    display: none;
+}
+
+#domBoard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    width: 55vh;
+    height: 55vh;
+}
+
+
+
+.cell {
+    background: #ddd;
+    margin: 1px;
+    cursor: pointer;
+    font-size: 7vh;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.marker {
+    width: 12vh;
+}
+
+#playBtn {
+    cursor: pointer;
+    background: #eee;
+    border-radius: 5px;
+    padding: 4vh;
+    width: 40vh;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#playerOneName,
+#playerTwoName {
+    display: none;
+}
+
+.playerNamePrompt {
+    font-size: 2.7vh;
+    text-align: center;
+}
+
+.playerNameInput {
+    border: none;
+    border-bottom: 1px solid #222;
+    font-size: 3vh;
+    outline: none;
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+    width: 20rem;
+}
+
+#gameDisplay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    color: #333;
+    font-size: 2.7vh;
+    padding: 0.5rem 0;
+    margin: 1px;
+    height: 7vh;
+}
+
+#gameComplete {
+    display: none;
+    position: absolute;
+    top: calc(7vh + 3px);
+    height: 55vh;
+    width: 55vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.restartBtn {
+    display: flex;
+    background: #eee;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    height: calc((55vh / 3) - 2px);
+    width: 55vh;
+    font-size: 2vh;
+    margin: 0 1px;
+    position: relative;
+    top: -1px;
+}
+
+.restartBtn span {
+    padding: 0 0.5rem;
+}
+
+.restartBtn:focus {
+    outline: none;
+}
+
+@media only screen and (max-width: 500px) {
+  #domBoard,
+  #gameComplete {
+    width: 45vh;
+    height: 45vh;
+  }
+}
